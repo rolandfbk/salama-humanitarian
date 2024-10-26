@@ -1,25 +1,26 @@
 Rails.application.routes.draw do
-  get "equipment/index"
-  get "equipment/show"
-  get "equipment/new"
-  get "equipment/create"
-  get "equipment/edit"
-  get "equipment/update"
-  get "equipment/destroy"
-  get "food/index"
-  get "food/show"
-  get "food/new"
-  get "food/create"
-  get "food/edit"
-  get "food/update"
-  get "food/destroy"
-  get "people/index"
-  get "people/show"
-  get "people/new"
-  get "people/create"
-  get "people/edit"
-  get "people/update"
-  get "people/destroy"
+  get "reports/index"
+  # get "equipment/index"
+  # get "equipment/show"
+  # get "equipment/new"
+  # get "equipment/create"
+  # get "equipment/edit"
+  # get "equipment/update"
+  # get "equipment/destroy"
+  # get "food/index"
+  # get "food/show"
+  # get "food/new"
+  # get "food/create"
+  # get "food/edit"
+  # get "food/update"
+  # get "food/destroy"
+  # get "people/index"
+  # get "people/show"
+  # get "people/new"
+  # get "people/create"
+  # get "people/edit"
+  # get "people/update"
+  # get "people/destroy"
   #get "inventory/index"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
@@ -34,7 +35,9 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "posts#index"
 
-  resources :people
+  resources :people do
+    resources :allocations, only: [:create]
+  end
   resources :food
   resources :equipment
 
