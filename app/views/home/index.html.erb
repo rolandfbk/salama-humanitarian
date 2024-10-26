@@ -1,7 +1,7 @@
 <h1>Welcome to the Humanitarian Management System</h1>
 
 <% if current_user %>
-  <p>Welcome, <%= current_user.email %>!</p>
+  <p>Welcome, <%= "#{current_user.first_name} #{current_user.last_name}" %>!</p>
 
   <% if current_user.admin? %>
     <h2>Admin Dashboard</h2>

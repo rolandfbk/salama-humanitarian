@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get "home/index"
+  # get "home/index"
   # namespace :admin do
   #   get "users/index"
   #   get "users/new"
