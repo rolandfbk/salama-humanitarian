@@ -1,2 +1,16 @@
-<h1>People#show</h1>
-<p>Find me in app/views/people/show.html.erb</p>
+<h2>Allocate Resources</h2>
+<%= render 'allocations/form', person: @person, allocation: Allocation.new %>
+
+<h3>Allocated Resources</h3>
+<table>
+  <tr>
+    <th>Food</th>
+    <th>Equipment</th>
+  </tr>
+  <% @person.allocations.each do |allocation| %>
+    <tr>
+      <td><%= allocation.food&.name || "None" %></td>
+      <td><%= allocation.equipment&.name || "None" %></td>
+    </tr>
+  <% end %>
+</table>
