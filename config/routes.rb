@@ -1,4 +1,13 @@
 Rails.application.routes.draw do
+  get "home/index"
+  # namespace :admin do
+  #   get "users/index"
+  #   get "users/new"
+  #   get "users/create"
+  #   get "users/edit"
+  #   get "users/update"
+  #   get "users/destroy"
+  # end
   devise_for :users
   # get "reports/index"
   # get "equipment/index"
@@ -36,6 +45,8 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "posts#index"
 
+  root 'home#index'
+
   resources :people do
     resources :allocations, only: [:create]
   end
@@ -44,4 +55,9 @@ Rails.application.routes.draw do
 
   get "inventory" => "inventory#index"
   get "reports" => "reports#index"
+
+  namespace :admin do
+    resources :users
+  end
+
 end
