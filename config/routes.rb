@@ -42,4 +42,5 @@ Rails.application.routes.draw do
   resources :equipment
 
   get "inventory" => "inventory#index"
+  get "reports" => "reports#index"
 end

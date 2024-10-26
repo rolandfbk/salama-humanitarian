@@ -16,6 +16,13 @@
       <tr>
         <td><%= food.name %></td>
         <td><%= food.quantity %></td>
+        <td>
+          <% if food.low_stock? %>
+            <span style="color: red;">Low Stock</span>
+          <% else %>
+            <span style="color: green;">Sufficient</span>
+          <% end %>
+        </td>
       </tr>
     <% end %>
   </tbody>
@@ -34,6 +41,13 @@
       <tr>
         <td><%= equipment.name %></td>
         <td><%= equipment.quantity %></td>
+        <td>
+          <% if equipment.low_stock? %>
+            <span style="color: red;">Low Stock</span>
+          <% else %>
+            <span style="color: green;">Sufficient</span>
+          <% end %>
+        </td>
       </tr>
     <% end %>
   </tbody>

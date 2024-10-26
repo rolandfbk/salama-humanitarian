@@ -5,4 +5,8 @@ class Equipment < ApplicationRecord
   validates :name, :quantity, presence: true
   validates :name, length: { minimum: 100 }
   validates :quantity, numericality: { only_integer: true }
+
+  def low_stock?
+    quantity < 5
+  end
 end
