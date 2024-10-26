@@ -1,0 +1,13 @@
+<%= form_with(model: [ @person, @allocation ], local: true) do |f| %>
+  <div>
+    <%= f.label :food_id, "Select Food Item" %>
+    <%= f.collection_select :food_id, Food.all, :id, :name, prompt: "Choose a food item" %>
+  </div>
+  <div>
+    <%= f.label :equipment_id, "Select Equipment Item" %>
+    <%= f.collection_select :equipment_id, Equipment.all, :id, :name, prompt: "Choose equipment" %>
+  </div>
+  <div>
+    <%= f.submit "Allocate Resources" %>
+  </div>
+<% end %>
