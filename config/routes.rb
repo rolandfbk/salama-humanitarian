@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  get "reports/index"
+  devise_for :users
+  # get "reports/index"
   # get "equipment/index"
   # get "equipment/show"
   # get "equipment/new"
