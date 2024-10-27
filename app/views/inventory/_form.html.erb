@@ -1,4 +1,4 @@
-<%= form_with(model: [ @person, @allocation ], local: true) do |f| %>
+<%= form_with(model: [ Person, Allocation ], local: true) do |f| %>
   <div>
     <%= f.label :food_id, "Select Food Item" %>
     <%= f.collection_select :food_id, Food.all, :id, :name, prompt: "Choose a food item" %>

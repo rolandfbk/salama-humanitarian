@@ -1,5 +1,23 @@
+<h1>Person details</h1>
+<div>
+  <strong>Name:</strong>
+  <%= @person.name %>
+</div>
+<div>
+  <strong>Age:</strong>
+  <%= @person.age %>
+</div>
+<div>
+  <strong>Category:</strong>
+  <%= @person.category %>
+</div>
+<div>
+  <strong>Description:</strong>
+  <%= @person.description %>
+</div>
+
 <h2>Allocate Resources</h2>
-<%= render 'allocations/form', person: @person, allocation: Allocation.new %>
+<%= render 'inventory/form', person: @person, allocation: Allocation.new %>
 
 <h3>Allocated Resources</h3>
 <table>

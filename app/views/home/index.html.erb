@@ -7,14 +7,16 @@
     <h2>Admin Dashboard</h2>
     <ul>
       <li><%= link_to 'Manage Users', admin_users_path %></li>
+      <li><%= link_to 'Manage Displaced People', people_path %></li>
       <li><%= link_to 'Inventory Board', inventory_path %></li>
       <li><%= link_to 'Resource Allocation Report', reports_path %></li>
     </ul>
   <% elsif current_user.volunteer? %>
     <h2>Volunteer Dashboard</h2>
     <ul>
+      <li><%= link_to 'Add Person', new_person_path %></li>
+      <li><%= link_to 'Manage Person', people_path %></li>
       <li><%= link_to 'View Inventory', inventory_path %></li>
-      <li><%= link_to 'Resource Allocation Report', reports_path %></li>
     </ul>
   <% end %>
 <% else %>

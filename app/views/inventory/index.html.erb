@@ -1,4 +1,6 @@
-<%= render 'admin/users/adminlinks' %>
+<% if current_user.admin? %>
+  <%= render 'admin/users/adminlinks' %>
+<% end %>
 
 <h1>Inventory Dashboard</h1>
 

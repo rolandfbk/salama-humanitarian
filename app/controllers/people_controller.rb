@@ -11,11 +11,16 @@ class PeopleController < ApplicationController
   end
 
   def create
-
+    @person = Person.new(person_params)
+    if @person.save
+      redirect_to new_person_path, notice: '#{@person.name} added successfully.'
+    else
+      render :new
+    end
   end
 
   def create_allocation
-    @person = Person.find(params[:id_person])
+    @person = Person.find(params[:person_id])
     @allocation = @person.allocations.build(allocation_params)
 
     if @allocation.save
@@ -38,5 +43,9 @@ class PeopleController < ApplicationController
 
   def allocation_params
     params.require(:allocation).permit(:food_id, :equipment_id)
+  end
+
+  def person_params
+    params.require(:person).permit(:name, :age, :category, :description)
   end
 end

@@ -6,6 +6,7 @@
       <th>Name</th>
       <th>Age</th>
       <th>Category</th>
+      <th>Action</th>
     </tr>
   </thead>
   <tbody>
@@ -14,6 +15,13 @@
         <td><%= person.name %></td>
         <td><%= person.age %></td>
         <td><%= person.category %></td>
+        <td>
+          <%= link_to 'Show / Allocate Resources', person %>
+          <% if current_user.admin? %>
+            <%= link_to 'Edit', edit_person_path(person) %>
+            <%= link_to 'Delete', person, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <% end %>
+        </td>
       </tr>
     <% end %>
   </tbody>
