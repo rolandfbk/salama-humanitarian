@@ -1,0 +1,26 @@
+<div>
+  <% unless root_path == request.path %>
+    <span>
+      <%= link_to 'Dashboard', root_path %>
+    </span>
+  <% end %>
+
+  <% unless admin_users_path == request.path %>
+    <span>
+      <%= link_to 'Manage Users', admin_users_path %>
+    </span>
+  <% end %>
+  
+  <% unless inventory_path == request.path %>
+    <span>
+      <%= link_to 'Inventory Board', inventory_path %>
+    </span>
+  <% end %>
+
+  <% unless reports_path == request.path %>
+    <span>
+      <%= link_to 'Resource Allocation Report', reports_path %>
+    </span>
+  <% end %>
+
+</div>

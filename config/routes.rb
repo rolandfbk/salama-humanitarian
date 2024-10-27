@@ -1,37 +1,7 @@
 Rails.application.routes.draw do
-  # get "home/index"
-  # namespace :admin do
-  #   get "users/index"
-  #   get "users/new"
-  #   get "users/create"
-  #   get "users/edit"
-  #   get "users/update"
-  #   get "users/destroy"
-  # end
+  
   devise_for :users
-  # get "reports/index"
-  # get "equipment/index"
-  # get "equipment/show"
-  # get "equipment/new"
-  # get "equipment/create"
-  # get "equipment/edit"
-  # get "equipment/update"
-  # get "equipment/destroy"
-  # get "food/index"
-  # get "food/show"
-  # get "food/new"
-  # get "food/create"
-  # get "food/edit"
-  # get "food/update"
-  # get "food/destroy"
-  # get "people/index"
-  # get "people/show"
-  # get "people/new"
-  # get "people/create"
-  # get "people/edit"
-  # get "people/update"
-  # get "people/destroy"
-  #get "inventory/index"
+  
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.

@@ -1,6 +1,6 @@
 class ReportsController < ApplicationController
 
-  brfore_action :admin_only
+  before_action :admin_only
 
   def index
     # People counts by category
