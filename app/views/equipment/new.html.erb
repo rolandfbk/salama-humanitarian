@@ -1,2 +1,6 @@
-<h1>Equipment#new</h1>
-<p>Find me in app/views/equipment/new.html.erb</p>
+<h1>Add Equipment</h1>
+
+<%= render 'formaddequipment', equipment: @equipment %>
+
+<br>
+<%= link_to 'Manage Equipment', equipment_index_path %>

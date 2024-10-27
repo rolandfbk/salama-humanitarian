@@ -3,7 +3,7 @@ class Equipment < ApplicationRecord
   has_many :people, through: :allocations
 
   validates :name, :quantity, presence: true
-  validates :name, length: { minimum: 100 }
+  validates :name, length: { maximum: 100, minimum: 2 }
   validates :quantity, numericality: { only_integer: true }
 
   def low_stock?
